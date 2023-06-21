@@ -1,17 +1,17 @@
 # UTN FRRO - Asignatura: Diseño de Sistemas
 ## RRHH - Ingenieria inversa
 Aplicación académica de ejemplo con Spring para agendar entrevistas con candidatos según los conocimientos requeridos.
-- Link para ver la aplicación online: [https://link.com/]()
+- Link para ver la aplicación online: [http://rrhhdsi.us-east-2.elasticbeanstalk.com/](http://rrhhdsi.us-east-2.elasticbeanstalk.com/)
 
 ## Software necesario para correr el proyecto
-- Descargar e instalar JDK **[Java 20](https://www.oracle.com/java/technologies/downloads/#java20)**.
+- Descargar e instalar JDK **[Java 20/17](https://www.oracle.com/java/technologies/downloads/#java20)**.
 - Descargar e instalar la última versión de **[IntellIJ IDEA](https://www.jetbrains.com/idea/download/)** u otro IDE para Java.
 - Descargar e instalar **[XAMPP 8.2.4](https://www.apachefriends.org/es/download.html)**.
 
 ## Descargar dependencias
 Antes de ejecutar el proyecto por primera vez se deben descargar las dependencias a través de Maven:
 1. Ir a la barra lateral derecha y hacer clic en el icono de **Maven**
-2. Hacer doble clic sobre **clean**
+2. Hacer doble clic sobre **clean** e **install**
 
 ## Como conectar la base de datos MySQL
 1. Ejecutar XAMPP y hacer clic en **Start** de **Apache** y **MySQL**

@@ -38,7 +38,7 @@ public class ControladorAgendarEntrevista {
     public String buscarCandidatos(@RequestParam(value = "idBusquedaLaboral", required = false, defaultValue = "") Long idBusquedaLaboral,
                                    Model model) {
 
-        busquedaLaboral = busquedasDao.getOne(idBusquedaLaboral);
+        busquedaLaboral = busquedasDao.getReferenceById(idBusquedaLaboral);
 
         Collection<Conocimiento> conocimientosBuscados = busquedaLaboral.getConocimientosBuscados();
 
@@ -55,8 +55,8 @@ public class ControladorAgendarEntrevista {
                                       @RequestParam(value = "codCandidato", required = false, defaultValue = "") Long codCandidato,
                                       @RequestParam(value = "idBusquedaLaboral", required = true) Long idBusquedaLaboral,
                                       Model model) {
-        Candidato candidato = candidatoDao.getOne(codCandidato);
-        busquedaLaboral = busquedasDao.getOne(idBusquedaLaboral);
+        Candidato candidato = candidatoDao.getReferenceById(codCandidato);
+        busquedaLaboral = busquedasDao.getReferenceById(idBusquedaLaboral);
 
         busquedaLaboral.agregarEntrevista(candidato, fecha);
 
@@ -66,6 +66,6 @@ public class ControladorAgendarEntrevista {
         model.addAttribute("busquedaLaboral", busquedaLaboral);
         model.addAttribute("fecha", fecha);
 
-        return "/entrevista/confirmacion";
+        return "entrevista/confirmacion";
     }
 }
